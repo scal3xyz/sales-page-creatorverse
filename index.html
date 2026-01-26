@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCAL3 Creatorverse | Crypto's Premier Creator Network</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: '#2D7FF9', cream: '#FFF7E9', dark: '#232324' }, fontFamily: { display: ['Space Grotesk', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
+  </script>
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    h1,h2,h3,h4,.font-display { font-family: 'Space Grotesk', sans-serif; }
+    .shadow-brutal { box-shadow: 4px 4px 0px #232324; }
+    .shadow-brutal-sm { box-shadow: 3px 3px 0px #232324; }
+    .shadow-brutal-lg { box-shadow: 6px 6px 0px #232324; }
+    .border-3 { border-width: 3px; }
+    html { scroll-behavior: smooth; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .float { animation: float 3s ease-in-out infinite; }
+    @keyframes pulse-glow { 0%,100% { box-shadow: 0 0 15px rgba(45,127,249,0.4); } 50% { box-shadow: 0 0 30px rgba(45,127,249,0.7); } }
+    .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+    input[type="range"] { -webkit-appearance: none; width: 100%; height: 12px; border-radius: 8px; background: #e5e5e5; border: 2px solid #232324; }
+    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; background: #2D7FF9; border: 3px solid #232324; cursor: pointer; }
+    .hover-lift { transition: all 0.2s; }
+    .hover-lift:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0px #232324; }
+    
+    /* Marquee Scroll Animation */
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes scroll-right {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+    .marquee-left { animation: scroll-left 30s linear infinite; }
+    .marquee-right { animation: scroll-right 30s linear infinite; }
+    .marquee-container { overflow: hidden; }
+    .marquee-content { display: flex; width: max-content; }
+    .marquee-container:hover .marquee-left,
+    .marquee-container:hover .marquee-right { animation-play-state: paused; }
+  </style>
+</head>
+<body class="bg-cream text-dark">
+
+<!-- ======================= SECTION: NAV ======================= -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-sm border-b-3 border-dark">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <img src="images/logos/scal3-creatorverse-logo.svg" alt="SCAL3 Creatorverse" class="h-14 sm:h-16 w-auto">
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#network" class="font-semibold hover:text-brand transition-colors">Network</a>
+      <a href="#campaigns" class="font-semibold hover:text-brand transition-colors">Campaigns</a>
+      <a href="#results" class="font-semibold hover:text-brand transition-colors">Results</a>
+      <a href="#pricing" class="font-semibold hover:text-brand transition-colors">Pricing</a>
+    </div>
+    <a href="https://calendly.com/davidonchain/30min" target="_blank" class="bg-brand text-white px-5 py-2 rounded-lg font-bold border-3 border-dark shadow-brutal-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">Book a Call</a>
+  </div>
+</nav>
+<!-- ======================= END: NAV ======================= -->
+
+<!-- ======================= SECTION: HERO ======================= -->
+<section class="pt-28 pb-20 px-4 overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border-3 border-dark shadow-brutal-sm mb-6">
+          <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+          <span class="font-semibold text-sm">400+ Active Creators</span>
+        </div>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.5rem] font-bold leading-[1.1] mb-6">
+          Turn Crypto Twitter<br class="hidden sm:block"/> Into Your <span class="text-brand">Growth Engine</span>
+        </h1>
+        <p class="text-base sm:text-lg text-dark/70 mb-8 leading-relaxed max-w-lg">The Creatorverse is crypto's largest private network of vetted content creators and KOLs. We help brands generate reach, drive engagement, and build authentic narratives.</p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="https://calendly.com/davidonchain/30min" target="_blank" class="bg-brand text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg border-4 border-dark shadow-brutal hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all text-center">Book a Call →</a>
+          <a href="#campaigns" class="bg-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg border-4 border-dark shadow-brutal hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all text-center">See How It Works</a>
+        </div>
+      </div>
+      <!-- HERO-NETWORK-VIZ - Clean Marquee Grid -->
+      <div class="relative mt-8 lg:mt-0">
+        <div class="bg-white rounded-2xl border-4 border-dark shadow-brutal-lg p-4 sm:p-6 overflow-hidden">
+          <!-- Stats Row -->
+          <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6">
+            <div class="text-center bg-cream rounded-lg sm:rounded-xl p-2 sm:p-4 border-2 border-dark/10">
+              <p class="font-display text-xl sm:text-3xl lg:text-4xl font-bold text-brand">400+</p>
+              <p class="text-xs sm:text-sm text-dark/60">Creators</p>
+            </div>
+            <div class="text-center bg-cream rounded-lg sm:rounded-xl p-2 sm:p-4 border-2 border-dark/10">
+              <p class="font-display text-xl sm:text-3xl lg:text-4xl font-bold text-brand">250M</p>
+              <p class="text-xs sm:text-sm text-dark/60">Monthly Reach</p>
+            </div>
+            <div class="text-center bg-cream rounded-lg sm:rounded-xl p-2 sm:p-4 border-2 border-dark/10">
+              <p class="font-display text-xl sm:text-3xl lg:text-4xl font-bold text-brand">3.5M+</p>
+              <p class="text-xs sm:text-sm text-dark/60">Followers</p>
+            </div>
+          </div>
+          <!-- Creator Grid with Center Logo -->
+          <div class="relative bg-gradient-to-br from-cream to-brand/5 rounded-xl p-4 sm:p-6 border-2 border-dark/10">
+            <div class="grid grid-cols-5 gap-2 sm:gap-3">
+              <!-- Row 1 -->
+              <img src="images/creators/circular/creator-14.jpg" alt="Creator" class="aspect-square rounded-full border-3 border-dark object-cover float shadow-md" style="animation-delay: 0s;">
+              <img src="images/creators/circular/creator-03.jpg" alt="Creator" class="aspect-square rounded-full border-3 border-dark object-cover float shadow-md" style="animation-delay: 0.2s;">
+              <img src="images/creators/circular/creator-09.jpg" alt="Creator" class="aspect-square rounded-full border-3 border-dark object-cover float shadow-md" style="animation-delay: 0.4s;">
+              <img src="images/creators/circular/creator-07.jpg" alt="Creator" class="aspect-square rounded-full border-3 border-dark object-cover float shadow-md" style="animation-delay: 0.6s;">
+              <img src="images/creators/circular/creator-11.jpg" alt="Creator" class="aspect-square rounded-full border-3 border-dark object-cover float shadow-md" style="animation-delay: 0.8s;">
+              <!-- Row 2 -->
+              <img src="images/creators/circular/creator-02.jpg" alt="Creator" class="aspect-square rounded-full border-3 border-dark object-cover float shadow-md" style="animation-delay: 0.3s;">
+              <img src="images/creators/circular/creator-12.jpg" alt="Creator" class="aspect-square rounded-full border-3 border-dark object-cover float shadow-md" style="animation-delay: 0.5s;">
+              <!-- Center Square Logo -->
+              <div class="aspect-square bg-brand rounded-xl border-3 border-dark flex items-center justify-center shadow-brutal-sm pulse-glow overflow-hidden p-1">
+                <img src="images/logos/scal3-square-logo.svg" alt="SCAL3" class="w-full h-full object-contain">
+              </div>
+              <img src="images/creators/circular/creator-05.jpg" alt="Creator" class="aspect-square rounded-full border-3 border-dark object-cover float shadow-md" style="animation-delay: 0.7s;">
+              <img src="images/creators/circular/creator-01.jpg" alt="Creator" class="aspect-square rounded-full border-3 border-dark object-cover float shadow-md" style="animation-delay: 0.9s;">
+              <!-- Row 3 -->
+              <img src="images/creators/circular/creator-08.jpg" alt="Creator" class="aspect-square rounded-full border-3 border-dark object-cover float shadow-md" style="animation-delay: 0.15s;">
+              <img src="images/creators/circular/creator-04.jpg" alt="Creator" class="aspect-square rounded-full border-3 border-dark object-cover float shadow-md" style="animation-delay: 0.35s;">
+              <img src="images/creators/circular/creator-13.jpg" alt="Creator" class="aspect-square rounded-full border-3 border-dark object-cover float shadow-md" style="animation-delay: 0.55s;">
+              <img src="images/creators/circular/creator-10.jpg" alt="Creator" class="aspect-square rounded-full border-3 border-dark object-cover float shadow-md" style="animation-delay: 0.75s;">
+              <img src="images/creators/circular/creator-06.jpg" alt="Creator" class="aspect-square rounded-full border-3 border-dark object-cover float shadow-md" style="animation-delay: 0.95s;">
+            </div>
+          </div>
+        </div>
+        <div class="absolute -bottom-3 -right-3 w-full h-full bg-brand rounded-2xl border-4 border-dark -z-10"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======================= END: HERO ======================= -->
+
+<!-- ======================= SECTION: CLIENTS ======================= -->
+<section class="py-12 border-y-3 border-dark bg-white">
+  <p class="text-center text-sm font-semibold text-dark/40 mb-8 tracking-wider uppercase px-4">Trusted by Leading Web3 Brands</p>
+  <div class="w-full px-4">
+    <!-- Row 1 - 5 logos -->
+    <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 lg:gap-16 mb-6">
+      <img src="images/brands/abstract.png" alt="Abstract" class="h-10 sm:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity">
+      <img src="images/brands/aethir.png" alt="Aethir" class="h-10 sm:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity">
+      <img src="images/brands/cookie3.png" alt="Cookie3" class="h-10 sm:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity">
+      <img src="images/brands/dydx.png" alt="dYdX" class="h-10 sm:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity">
+      <img src="images/brands/goldfinch.png" alt="Goldfinch" class="h-10 sm:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity">
+    </div>
+    <!-- Row 2 - 5 logos -->
+    <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 lg:gap-16">
+      <img src="images/brands/hellotrade.png" alt="HelloTrade" class="h-10 sm:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity">
+      <img src="images/brands/holoworld.png" alt="Holoworld" class="h-10 sm:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity">
+      <img src="images/brands/moonshot.png" alt="Moonshot" class="h-10 sm:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity">
+      <img src="images/brands/paradex.png" alt="Paradex" class="h-10 sm:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity">
+      <img src="images/brands/more.png" alt="And many more" class="h-10 sm:h-12 w-auto opacity-70 hover:opacity-100 transition-opacity">
+    </div>
+  </div>
+</section>
+<!-- ======================= END: CLIENTS ======================= -->
+
+<!-- ======================= SECTION: PROBLEM ======================= -->
+<section class="py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">The Problem With Crypto Marketing</h2>
+      <p class="text-lg text-dark/60">Most brands struggle with the same issues when trying to grow on Crypto Twitter</p>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-red-50 border-3 border-red-200 rounded-xl p-5 hover-lift"><span class="text-3xl mb-3 block">🤖</span><h3 class="font-display font-bold mb-1">Fake Engagement</h3><p class="text-dark/60 text-sm">Bots and bought followers that don't convert</p></div>
+      <div class="bg-red-50 border-3 border-red-200 rounded-xl p-5 hover-lift"><span class="text-3xl mb-3 block">📉</span><h3 class="font-display font-bold mb-1">No ROI Tracking</h3><p class="text-dark/60 text-sm">Impossible to measure what's actually working</p></div>
+      <div class="bg-red-50 border-3 border-red-200 rounded-xl p-5 hover-lift"><span class="text-3xl mb-3 block">💸</span><h3 class="font-display font-bold mb-1">Overpaying</h3><p class="text-dark/60 text-sm">Fixed fees regardless of actual results</p></div>
+      <div class="bg-red-50 border-3 border-red-200 rounded-xl p-5 hover-lift"><span class="text-3xl mb-3 block">😫</span><h3 class="font-display font-bold mb-1">Management Pain</h3><p class="text-dark/60 text-sm">Coordinating dozens of creators is exhausting</p></div>
+    </div>
+  </div>
+</section>
+<!-- ======================= END: PROBLEM ======================= -->
+
+<!-- ======================= SECTION: SOLUTION ======================= -->
+<section class="py-20 px-4 bg-brand text-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Enter The Creatorverse</h2>
+      <p class="text-lg text-white/90 max-w-4xl mx-auto">A private network of crypto creators, managed campaigns, and transparent results</p>
+    </div>
+    <div class="grid md:grid-cols-4 gap-5">
+      <div class="bg-white/20 rounded-xl p-6 border-2 border-white/40 hover-lift"><div class="w-12 h-12 bg-white/30 rounded-lg flex items-center justify-center mb-4 text-2xl border-2 border-white/50">✓</div><h3 class="font-display text-lg font-bold mb-2">Vetted Creators</h3><p class="text-white/80 text-sm">Every creator manually reviewed. Real followers, real engagement.</p></div>
+      <div class="bg-white/20 rounded-xl p-6 border-2 border-white/40 hover-lift"><div class="w-12 h-12 bg-white/30 rounded-lg flex items-center justify-center mb-4 text-2xl border-2 border-white/50">⚡</div><h3 class="font-display text-lg font-bold mb-2">Launch Fast</h3><p class="text-white/80 text-sm">Campaigns can go live in 24-48 hours. We move at the speed of crypto.</p></div>
+      <div class="bg-white/20 rounded-xl p-6 border-2 border-white/40 hover-lift"><div class="w-12 h-12 bg-white/30 rounded-lg flex items-center justify-center mb-4 text-2xl border-2 border-white/50">📊</div><h3 class="font-display text-lg font-bold mb-2">Full Transparency</h3><p class="text-white/80 text-sm">Real-time dashboards, verified metrics, detailed reports.</p></div>
+      <div class="bg-white/20 rounded-xl p-6 border-2 border-white/40 hover-lift"><div class="w-12 h-12 bg-white/30 rounded-lg flex items-center justify-center mb-4 text-2xl border-2 border-white/50">💰</div><h3 class="font-display text-lg font-bold mb-2">Better Value</h3><p class="text-white/80 text-sm">Competitive CPMs that beat any agency. More reach for your budget.</p></div>
+    </div>
+  </div>
+</section>
+<!-- ======================= END: SOLUTION ======================= -->
+
+<!-- ======================= SECTION: NETWORK ======================= -->
+<section id="network" class="py-20 px-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Our Network</h2>
+      <p class="text-lg text-dark/60">Two tiers of creators to match your goals and budget</p>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-6">
+      <!-- NETWORK-STANDARD -->
+      <div class="bg-white rounded-2xl border-4 border-dark shadow-brutal overflow-hidden">
+        <div class="p-8">
+          <h3 class="font-display text-2xl font-bold mb-2">Standard Network</h3>
+          <p class="text-dark/60 mb-6">Launch fast and effective campaigns using our wide network of creators</p>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-cream rounded-xl p-4 text-center border-2 border-dark/10"><p class="font-display text-3xl font-bold text-brand">300+</p><p class="text-sm text-dark/60">Creators</p></div>
+            <div class="bg-cream rounded-xl p-4 text-center border-2 border-dark/10"><p class="font-display text-3xl font-bold text-brand">250M</p><p class="text-sm text-dark/60">Monthly Impressions</p></div>
+            <div class="bg-cream rounded-xl p-4 text-center border-2 border-dark/10"><p class="font-display text-3xl font-bold text-brand">1.9M</p><p class="text-sm text-dark/60">Total Followers</p></div>
+            <div class="bg-cream rounded-xl p-4 text-center border-2 border-dark/10"><p class="font-display text-3xl font-bold text-brand">90K</p><p class="text-sm text-dark/60">Smart Followers</p></div>
+          </div>
+          <p class="font-semibold mb-2">Perfect for:</p>
+          <ul class="space-y-1 text-sm text-dark/70"><li>✓ Projects of any size</li><li>✓ Awareness and reach campaigns</li><li>✓ Cost-effective influencer marketing</li><li>✓ Brands that want speed and scale</li></ul>
+        </div>
+      </div>
+      <!-- NETWORK-PREMIUM -->
+      <div class="bg-brand text-white rounded-2xl border-4 border-dark shadow-brutal overflow-hidden relative">
+        <div class="absolute top-4 right-4 bg-yellow-400 text-dark px-3 py-1 rounded-full text-sm font-bold">👑 Premium</div>
+        <div class="p-8">
+          <h3 class="font-display text-2xl font-bold mb-2">Premium Network</h3>
+          <p class="text-white/80 mb-6">Activate exclusive creators with larger audiences and more influence</p>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-white/15 rounded-xl p-4 text-center border-2 border-white/30"><p class="font-display text-3xl font-bold">30+</p><p class="text-sm text-white/70">Creators</p></div>
+            <div class="bg-white/15 rounded-xl p-4 text-center border-2 border-white/30"><p class="font-display text-3xl font-bold">180M</p><p class="text-sm text-white/70">Monthly Impressions</p></div>
+            <div class="bg-white/15 rounded-xl p-4 text-center border-2 border-white/30"><p class="font-display text-3xl font-bold">1.2M</p><p class="text-sm text-white/70">Total Followers</p></div>
+            <div class="bg-white/15 rounded-xl p-4 text-center border-2 border-white/30"><p class="font-display text-3xl font-bold">69K</p><p class="text-sm text-white/70">Smart Followers</p></div>
+          </div>
+          <p class="font-semibold mb-2">Perfect for:</p>
+          <ul class="space-y-1 text-sm text-white/80"><li>✓ High-conviction launches</li><li>✓ Projects optimizing for conversions</li><li>✓ Custom, hands-on experience</li><li>✓ Working with high-impact creators</li></ul>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+  </div>
+</section>
+
+<!-- FULL-WIDTH CREATOR SCROLLERS -->
+<div class="py-8 space-y-6 overflow-hidden">
+  <!-- Standard Network Scroller - Scrolls Left -->
+  <div class="marquee-container">
+    <div class="marquee-content marquee-left">
+      <div class="flex gap-5">
+        <img src="images/creators/standard/toxic.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/simonnick.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/taken.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/misha.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/lamz.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/ellaa.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/pinkbunny.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/saifmr.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/georman.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/ebiscuitrzking.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/wisdom.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/uzair.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/bukky.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/omar.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/erzking.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/castist.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/scarlet.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+      </div>
+      <div class="flex gap-5 ml-5">
+        <img src="images/creators/standard/toxic.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/simonnick.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/taken.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/misha.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/lamz.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/ellaa.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/pinkbunny.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/saifmr.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/georman.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/ebiscuitrzking.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/wisdom.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/uzair.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/bukky.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/omar.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/erzking.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/castist.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/standard/scarlet.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-dark object-cover flex-shrink-0 shadow-brutal-sm">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Premium Network Scroller - Scrolls Right -->
+  <div class="marquee-container">
+    <div class="marquee-content marquee-right">
+      <div class="flex gap-5">
+        <img src="images/creators/premium/ashen.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/bando.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/oatmilk.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/hypeconomist.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/zaimiri.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/ffv.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/usopp.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/jampzey.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/tree.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/le.hl.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/meg.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/hydraze.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+      </div>
+      <div class="flex gap-5 ml-5">
+        <img src="images/creators/premium/ashen.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/bando.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/oatmilk.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/hypeconomist.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/zaimiri.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/ffv.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/usopp.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/jampzey.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/tree.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/le.hl.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/meg.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+        <img src="images/creators/premium/hydraze.png" alt="Creator" class="w-[140px] h-[230px] rounded-xl border-3 border-brand object-cover flex-shrink-0 shadow-brutal-sm">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END: FULL-WIDTH CREATOR SCROLLERS -->
+
+<!-- ======================= END: NETWORK ======================= -->
+
+<!-- ======================= SECTION: CAMPAIGNS ======================= -->
+<section id="campaigns" class="py-20 px-4 bg-white border-y-3 border-dark">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Choose Your Campaign Style</h2>
+      <p class="text-lg text-dark/60 max-w-4xl mx-auto">Two powerful ways to activate the Creatorverse, each designed for different goals and outcomes</p>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-8">
+      <!-- CAMPAIGNS-RAIDS -->
+      <div class="bg-cream rounded-2xl border-4 border-dark shadow-brutal overflow-hidden">
+        <div class="bg-dark text-white p-6"><div class="flex items-center gap-3 mb-2"><span class="text-3xl">🚀</span><h3 class="font-display text-2xl font-bold">Raids</h3></div><p class="text-white/70">Maximum impact, minimal time</p></div>
+        <div class="p-6">
+          <p class="text-dark/70 mb-6">Coordinated push campaigns where our entire network posts within a tight window, creating a "trending moment" effect.</p>
+          <div class="space-y-4 mb-6">
+            <div class="flex items-start gap-3"><div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center text-white text-lg flex-shrink-0">⚡</div><div><p class="font-semibold">24-48 Hour Blitz</p><p class="text-dark/60 text-sm">All posts go live within a coordinated window</p></div></div>
+            <div class="flex items-start gap-3"><div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center text-white text-lg flex-shrink-0">📈</div><div><p class="font-semibold">Trending Moments</p><p class="text-dark/60 text-sm">Flood the timeline and own the conversation</p></div></div>
+            <div class="flex items-start gap-3"><div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center text-white text-lg flex-shrink-0">💰</div><div><p class="font-semibold">Fixed Payments</p><p class="text-dark/60 text-sm">Predictable costs and straightforward execution</p></div></div>
+            <div class="flex items-start gap-3"><div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center text-white text-lg flex-shrink-0">🎯</div><div><p class="font-semibold">Industry-Leading CPMs</p><p class="text-dark/60 text-sm">Exceptional value at $15-$35 CPM range</p></div></div>
+          </div>
+          <div class="bg-white rounded-xl p-4 border-2 border-dark/10 mb-6">
+            <p class="font-semibold mb-2">Best for:</p>
+            <div class="flex flex-wrap gap-2"><span class="bg-dark text-white px-3 py-1 rounded-full text-xs font-semibold">TGE Launches</span><span class="bg-dark text-white px-3 py-1 rounded-full text-xs font-semibold">Major Announcements</span><span class="bg-dark text-white px-3 py-1 rounded-full text-xs font-semibold">Product Drops</span><span class="bg-dark text-white px-3 py-1 rounded-full text-xs font-semibold">Partnership Reveals</span><span class="bg-dark text-white px-3 py-1 rounded-full text-xs font-semibold">Funding Rounds</span><span class="bg-dark text-white px-3 py-1 rounded-full text-xs font-semibold">Time-Sensitive News</span></div>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t-2 border-dark/10">
+            <div><p class="text-dark/50 text-sm">Starting from</p><p class="font-display text-2xl font-bold">$5,000</p></div>
+            <a href="#pricing" class="bg-dark text-white px-5 py-2.5 rounded-xl font-bold border-3 border-dark hover-lift">See Pricing →</a>
+          </div>
+        </div>
+      </div>
+      <!-- CAMPAIGNS-ARENA -->
+      <div class="bg-gradient-to-br from-brand to-blue-600 text-white rounded-2xl border-4 border-dark shadow-brutal overflow-hidden relative">
+        <div class="absolute top-4 right-4 bg-yellow-400 text-dark px-3 py-1 rounded-full text-sm font-bold animate-pulse">✨ NEW</div>
+        <div class="bg-black/20 p-6"><div class="flex items-center gap-3 mb-2"><span class="text-3xl">🏆</span><h3 class="font-display text-2xl font-bold">Arena</h3></div><p class="text-white/80">Sustained visibility, compounding results</p></div>
+        <div class="p-6">
+          <p class="text-white/80 mb-6">Competitive leaderboard campaigns where creators compete over weeks to produce the best content. Performance-based payouts reward quality.</p>
+          <div class="space-y-4 mb-6">
+            <div class="flex items-start gap-3"><div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center text-lg flex-shrink-0">🗓️</div><div><p class="font-semibold">4-12 Week Campaigns</p><p class="text-white/70 text-sm">Consistent daily content throughout</p></div></div>
+            <div class="flex items-start gap-3"><div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center text-lg flex-shrink-0">🏅</div><div><p class="font-semibold">Competitive Leaderboard</p><p class="text-white/70 text-sm">Creators compete for rankings = higher quality</p></div></div>
+            <div class="flex items-start gap-3"><div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center text-lg flex-shrink-0">📊</div><div><p class="font-semibold">Performance-Based Payouts</p><p class="text-white/70 text-sm">Top performers earn more, rewarding results</p></div></div>
+            <div class="flex items-start gap-3"><div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center text-lg flex-shrink-0">📱</div><div><p class="font-semibold">Real-Time Dashboard</p><p class="text-white/70 text-sm">Watch submissions, scores, and metrics live</p></div></div>
+          </div>
+          <div class="bg-white/15 rounded-xl p-4 border-2 border-white/30 mb-6">
+            <p class="font-semibold mb-2">Best for:</p>
+            <div class="flex flex-wrap gap-2"><span class="bg-white text-brand px-3 py-1 rounded-full text-xs font-semibold">Brand Awareness</span><span class="bg-white text-brand px-3 py-1 rounded-full text-xs font-semibold">Narrative Building</span><span class="bg-white text-brand px-3 py-1 rounded-full text-xs font-semibold">Community Growth</span><span class="bg-white text-brand px-3 py-1 rounded-full text-xs font-semibold">Sustained Visibility</span><span class="bg-white text-brand px-3 py-1 rounded-full text-xs font-semibold">Long-Term Campaigns</span><span class="bg-white text-brand px-3 py-1 rounded-full text-xs font-semibold">Content Volume</span></div>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t-2 border-white/20">
+            <div><p class="text-white/60 text-sm">Starting from</p><p class="font-display text-2xl font-bold">$25,000</p></div>
+            <a href="#pricing" class="bg-white text-brand px-5 py-2.5 rounded-xl font-bold border-3 border-dark hover-lift">See Pricing →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CAMPAIGNS-TABLE -->
+    <div class="mt-8 sm:mt-12 bg-cream rounded-2xl border-4 border-dark shadow-brutal overflow-x-auto">
+      <table class="w-full min-w-[500px]">
+        <thead><tr class="bg-dark text-white"><th class="text-left py-3 sm:py-4 px-4 sm:px-6 font-display text-sm sm:text-base">Compare</th><th class="text-center py-3 sm:py-4 px-4 sm:px-6 font-display text-sm sm:text-base">🚀 Raids</th><th class="text-center py-3 sm:py-4 px-4 sm:px-6 font-display text-sm sm:text-base">🏆 Arena</th></tr></thead>
+        <tbody class="divide-y-2 divide-dark/10 text-sm sm:text-base">
+          <tr><td class="py-3 sm:py-4 px-4 sm:px-6 font-semibold">Duration</td><td class="py-3 sm:py-4 px-4 sm:px-6 text-center">24-48 hours</td><td class="py-3 sm:py-4 px-4 sm:px-6 text-center">4-12 weeks</td></tr>
+          <tr class="bg-white/50"><td class="py-3 sm:py-4 px-4 sm:px-6 font-semibold">Typical Posts</td><td class="py-3 sm:py-4 px-4 sm:px-6 text-center">50-250</td><td class="py-3 sm:py-4 px-4 sm:px-6 text-center">500-1000+</td></tr>
+          <tr><td class="py-3 sm:py-4 px-4 sm:px-6 font-semibold">Payout Model</td><td class="py-3 sm:py-4 px-4 sm:px-6 text-center">Fixed per creator</td><td class="py-3 sm:py-4 px-4 sm:px-6 text-center">Performance-based</td></tr>
+          <tr class="bg-white/50"><td class="py-3 sm:py-4 px-4 sm:px-6 font-semibold">Dashboard</td><td class="py-3 sm:py-4 px-4 sm:px-6 text-center">Post-campaign report</td><td class="py-3 sm:py-4 px-4 sm:px-6 text-center">Real-time tracking</td></tr>
+          <tr><td class="py-3 sm:py-4 px-4 sm:px-6 font-semibold">Starting Price</td><td class="py-3 sm:py-4 px-4 sm:px-6 text-center font-display font-bold text-base sm:text-lg text-brand">$5,000</td><td class="py-3 sm:py-4 px-4 sm:px-6 text-center font-display font-bold text-base sm:text-lg text-brand">$25,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<!-- ======================= END: CAMPAIGNS ======================= -->
+
+<!-- ======================= SECTION: HOW-IT-WORKS ======================= -->
+<section class="py-20 px-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">How It Works</h2>
+      <p class="text-lg text-dark/60">Two campaign styles, two different approaches, both designed for results</p>
+    </div>
+    <div class="flex justify-center gap-2 sm:gap-4 mb-8 sm:mb-10">
+      <button onclick="showHowItWorks('raid')" id="hiw-raid-btn" class="hiw-btn px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base border-3 border-dark bg-white text-dark">🚀 Raids</button>
+      <button onclick="showHowItWorks('arena')" id="hiw-arena-btn" class="hiw-btn px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base border-3 border-dark bg-brand text-white shadow-brutal">🏆 Arena</button>
+    </div>
+    <!-- HIW-RAID -->
+    <div id="hiw-raid" class="hiw-content hidden">
+      <div class="bg-white rounded-2xl border-4 border-dark shadow-brutal p-4 sm:p-8">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-3 mb-6 sm:mb-10">
+          <div class="bg-cream rounded-xl border-3 border-dark p-3 sm:p-4 text-center relative"><div class="w-8 h-8 sm:w-10 sm:h-10 bg-dark text-white rounded-full flex items-center justify-center font-display font-bold text-sm sm:text-base mx-auto mb-2">1</div><h3 class="font-bold text-xs sm:text-sm">Brief Us</h3><p class="text-[10px] sm:text-xs text-dark/60 hidden sm:block">Goals & timeline</p></div>
+          <div class="bg-cream rounded-xl border-3 border-dark p-3 sm:p-4 text-center relative"><div class="w-8 h-8 sm:w-10 sm:h-10 bg-dark text-white rounded-full flex items-center justify-center font-display font-bold text-sm sm:text-base mx-auto mb-2">2</div><h3 class="font-bold text-xs sm:text-sm">We Prepare</h3><p class="text-[10px] sm:text-xs text-dark/60 hidden sm:block">Creator selection</p></div>
+          <div class="bg-cream rounded-xl border-3 border-dark p-3 sm:p-4 text-center relative"><div class="w-8 h-8 sm:w-10 sm:h-10 bg-dark text-white rounded-full flex items-center justify-center font-display font-bold text-sm sm:text-base mx-auto mb-2">3</div><h3 class="font-bold text-xs sm:text-sm">Creators Post</h3><p class="text-[10px] sm:text-xs text-dark/60 hidden sm:block">24-48h window</p></div>
+          <div class="bg-cream rounded-xl border-3 border-dark p-3 sm:p-4 text-center relative"><div class="w-8 h-8 sm:w-10 sm:h-10 bg-dark text-white rounded-full flex items-center justify-center font-display font-bold text-sm sm:text-base mx-auto mb-2">4</div><h3 class="font-bold text-xs sm:text-sm">Timeline Floods</h3><p class="text-[10px] sm:text-xs text-dark/60 hidden sm:block">Dominate conversation</p></div>
+          <div class="bg-cream rounded-xl border-3 border-dark p-3 sm:p-4 text-center col-span-2 sm:col-span-1"><div class="w-8 h-8 sm:w-10 sm:h-10 bg-green-500 text-white rounded-full flex items-center justify-center font-display font-bold text-sm sm:text-base mx-auto mb-2">5</div><h3 class="font-bold text-xs sm:text-sm">Report Delivered</h3><p class="text-[10px] sm:text-xs text-dark/60 hidden sm:block">Full breakdown</p></div>
+        </div>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+          <div class="bg-gradient-to-br from-orange-50 to-amber-100 rounded-xl border-3 border-orange-200 p-4 sm:p-5"><span class="text-2xl sm:text-3xl mb-2 sm:mb-3 block">⚡</span><h3 class="font-display font-bold text-sm sm:text-base mb-1 sm:mb-2">Speed to Market</h3><p class="text-dark/70 text-xs sm:text-sm">Launch in as little as 24 hours. Perfect for time-sensitive announcements.</p></div>
+          <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl border-3 border-green-200 p-4 sm:p-5"><span class="text-2xl sm:text-3xl mb-2 sm:mb-3 block">🎯</span><h3 class="font-display font-bold text-sm sm:text-base mb-1 sm:mb-2">Concentrated Impact</h3><p class="text-dark/70 text-xs sm:text-sm">All posts hit within a tight window, creating trending moments.</p></div>
+          <div class="bg-gradient-to-br from-blue-50 to-cyan-100 rounded-xl border-3 border-blue-200 p-4 sm:p-5 sm:col-span-2 md:col-span-1"><span class="text-2xl sm:text-3xl mb-2 sm:mb-3 block">💰</span><h3 class="font-display font-bold text-sm sm:text-base mb-1 sm:mb-2">Predictable Pricing</h3><p class="text-dark/70 text-xs sm:text-sm">Fixed costs, clear deliverables. Know exactly what you're paying.</p></div>
+        </div>
+      </div>
+    </div>
+    <!-- HIW-ARENA -->
+    <div id="hiw-arena" class="hiw-content">
+      <div class="bg-gradient-to-br from-brand to-blue-600 rounded-2xl border-4 border-dark shadow-brutal p-4 sm:p-8 text-white">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-3 mb-6 sm:mb-10">
+          <div class="bg-white/15 rounded-xl border-2 border-white/30 p-3 sm:p-4 text-center relative"><div class="w-8 h-8 sm:w-10 sm:h-10 bg-white text-brand rounded-full flex items-center justify-center font-display font-bold text-sm sm:text-base mx-auto mb-2">1</div><h3 class="font-bold text-xs sm:text-sm">Set Goals</h3><p class="text-[10px] sm:text-xs text-white/70 hidden sm:block">Budget & objectives</p></div>
+          <div class="bg-white/15 rounded-xl border-2 border-white/30 p-3 sm:p-4 text-center relative"><div class="w-8 h-8 sm:w-10 sm:h-10 bg-white text-brand rounded-full flex items-center justify-center font-display font-bold text-sm sm:text-base mx-auto mb-2">2</div><h3 class="font-bold text-xs sm:text-sm">Brief Creators</h3><p class="text-[10px] sm:text-xs text-white/70 hidden sm:block">Messaging & incentives</p></div>
+          <div class="bg-white/15 rounded-xl border-2 border-white/30 p-3 sm:p-4 text-center relative"><div class="w-8 h-8 sm:w-10 sm:h-10 bg-white text-brand rounded-full flex items-center justify-center font-display font-bold text-sm sm:text-base mx-auto mb-2">3</div><h3 class="font-bold text-xs sm:text-sm">Creators Compete</h3><p class="text-[10px] sm:text-xs text-white/70 hidden sm:block">Climb leaderboard</p></div>
+          <div class="bg-white/15 rounded-xl border-2 border-white/30 p-3 sm:p-4 text-center relative"><div class="w-8 h-8 sm:w-10 sm:h-10 bg-white text-brand rounded-full flex items-center justify-center font-display font-bold text-sm sm:text-base mx-auto mb-2">4</div><h3 class="font-bold text-xs sm:text-sm">Verify & Score</h3><p class="text-[10px] sm:text-xs text-white/70 hidden sm:block">Quality checks</p></div>
+          <div class="bg-white/15 rounded-xl border-2 border-white/30 p-3 sm:p-4 text-center col-span-2 sm:col-span-1"><div class="w-8 h-8 sm:w-10 sm:h-10 bg-green-500 text-white rounded-full flex items-center justify-center font-display font-bold text-sm sm:text-base mx-auto mb-2">5</div><h3 class="font-bold text-xs sm:text-sm">Results Delivered</h3><p class="text-[10px] sm:text-xs text-white/70 hidden sm:block">Top performers paid</p></div>
+        </div>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 mb-4 sm:mb-6">
+          <div class="bg-white/15 rounded-xl border-2 border-white/30 p-4 sm:p-5"><span class="text-2xl sm:text-3xl mb-2 sm:mb-3 block">🏅</span><h3 class="font-display font-bold text-sm sm:text-base mb-1 sm:mb-2">Tiered Creator System</h3><p class="text-white/80 text-xs sm:text-sm">Diamond to Bronze tiers ensure diverse reach.</p></div>
+          <div class="bg-white/15 rounded-xl border-2 border-white/30 p-4 sm:p-5"><span class="text-2xl sm:text-3xl mb-2 sm:mb-3 block">📊</span><h3 class="font-display font-bold text-sm sm:text-base mb-1 sm:mb-2">Smart Scoring</h3><p class="text-white/80 text-xs sm:text-sm">Algorithm evaluates impressions, engagement, originality.</p></div>
+          <div class="bg-white/15 rounded-xl border-2 border-white/30 p-4 sm:p-5 sm:col-span-2 md:col-span-1"><span class="text-2xl sm:text-3xl mb-2 sm:mb-3 block">💸</span><h3 class="font-display font-bold text-sm sm:text-base mb-1 sm:mb-2">Performance Payouts</h3><p class="text-white/80 text-xs sm:text-sm">Base payouts plus bonus pools for top performers.</p></div>
+        </div>
+        <div class="bg-white/15 rounded-xl border-2 border-white/30 p-4 sm:p-5">
+          <h3 class="font-display font-bold text-sm sm:text-base mb-1 sm:mb-2">🚀 Why Arena is Different</h3>
+          <p class="text-white/90 text-xs sm:text-sm">Arena creates a competitive environment where creators produce more content, higher quality posts, and drive real engagement. The result? <span class="font-bold text-yellow-400">5-10x more content at better CPMs</span> than any other approach.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======================= END: HOW-IT-WORKS ======================= -->
+
+<!-- ======================= SECTION: RESULTS ======================= -->
+<section id="results" class="py-20 px-4 bg-brand text-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Real Results, Real Campaigns</h2>
+      <p class="text-lg text-white/80">See what the Creatorverse has delivered for brands like yours</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+      <button onclick="showCase('hellotrade')" data-tab="hellotrade" class="case-tab bg-white text-brand px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg sm:rounded-xl font-bold text-sm sm:text-base border-3 border-dark shadow-brutal-sm">HelloTrade</button>
+      <button onclick="showCase('holoworld')" data-tab="holoworld" class="case-tab bg-white/20 text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg sm:rounded-xl font-bold text-sm sm:text-base border-2 border-white/40 hover:bg-white/30">Holoworld AI</button>
+      <button onclick="showCase('goldfinch')" data-tab="goldfinch" class="case-tab bg-white/20 text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg sm:rounded-xl font-bold text-sm sm:text-base border-2 border-white/40 hover:bg-white/30">Goldfinch</button>
+    </div>
+    <!-- RESULTS-HELLOTRADE -->
+    <div id="case-hellotrade" class="case-content">
+      <div class="bg-white/20 rounded-2xl border-2 border-white/40 p-4 sm:p-8">
+        <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
+          <div>
+            <div class="flex items-center gap-4 mb-6"><img src="images/brands/hellotrade.svg" alt="HelloTrade" class="w-12 h-12 bg-white rounded-xl p-2 border-2 border-white/50 object-contain"><div><h3 class="font-display text-2xl font-bold">HelloTrade</h3><p class="text-white/70">Launch Announcement Campaign</p></div></div>
+            <div class="space-y-3 mb-6"><div class="flex justify-between py-2 border-b border-white/20"><span class="text-white/70">Campaign Type</span><span class="font-semibold">Raid (Standard)</span></div><div class="flex justify-between py-2 border-b border-white/20"><span class="text-white/70">Budget</span><span class="font-semibold">$9,000</span></div><div class="flex justify-between py-2 border-b border-white/20"><span class="text-white/70">Goal</span><span class="font-semibold">Promote launch announcement</span></div></div>
+            <div class="grid grid-cols-2 gap-3 mb-6"><div class="bg-white/15 rounded-xl p-4 text-center border border-white/30"><p class="font-display text-3xl font-bold">185</p><p class="text-white/70 text-sm">Posts</p></div><div class="bg-white/15 rounded-xl p-4 text-center border border-white/30"><p class="font-display text-3xl font-bold">120</p><p class="text-white/70 text-sm">Creators</p></div><div class="bg-white/15 rounded-xl p-4 text-center border border-white/30"><p class="font-display text-3xl font-bold">285K</p><p class="text-white/70 text-sm">Impressions</p></div><div class="bg-white/15 rounded-xl p-4 text-center border border-white/30"><p class="font-display text-3xl font-bold">4.05%</p><p class="text-white/70 text-sm">Engagement</p></div></div>
+            <div class="bg-green-500/30 rounded-xl p-4 border-2 border-green-400/50"><p class="text-green-200 font-bold">🏆 Key Win: Most anticipated project on MegaETH</p></div>
+          </div>
+          <div class="flex gap-3 h-full items-center">
+            <img src="images/campaigns/hellotrade-1.png" alt="HelloTrade Campaign" class="rounded-lg border-2 border-white/30 w-1/2 h-[200px] object-cover object-top">
+            <img src="images/campaigns/hellotrade-2.png" alt="HelloTrade Campaign" class="rounded-lg border-2 border-white/30 w-1/2 h-[200px] object-cover object-top">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- RESULTS-HOLOWORLD -->
+    <div id="case-holoworld" class="case-content hidden">
+      <div class="bg-white/20 rounded-2xl border-2 border-white/40 p-4 sm:p-8">
+        <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
+          <div>
+            <div class="flex items-center gap-4 mb-6"><img src="images/brands/holoworld.svg" alt="Holoworld" class="w-12 h-12 bg-white rounded-xl p-2 border-2 border-white/50 object-contain"><div><h3 class="font-display text-2xl font-bold">Holoworld AI</h3><p class="text-white/70">$HOLO TGE Campaign</p></div></div>
+            <div class="space-y-3 mb-6"><div class="flex justify-between py-2 border-b border-white/20"><span class="text-white/70">Campaign Type</span><span class="font-semibold">Raid (Standard + Engagement)</span></div><div class="flex justify-between py-2 border-b border-white/20"><span class="text-white/70">Budget</span><span class="font-semibold">$12,000</span></div><div class="flex justify-between py-2 border-b border-white/20"><span class="text-white/70">Goal</span><span class="font-semibold">Promote the $HOLO TGE</span></div></div>
+            <div class="grid grid-cols-2 gap-3 mb-6"><div class="bg-white/15 rounded-xl p-4 text-center border border-white/30"><p class="font-display text-3xl font-bold">172</p><p class="text-white/70 text-sm">Posts</p></div><div class="bg-white/15 rounded-xl p-4 text-center border border-white/30"><p class="font-display text-3xl font-bold">50</p><p class="text-white/70 text-sm">Creators</p></div><div class="bg-white/15 rounded-xl p-4 text-center border border-white/30"><p class="font-display text-3xl font-bold">427K</p><p class="text-white/70 text-sm">Impressions</p></div><div class="bg-white/15 rounded-xl p-4 text-center border border-white/30"><p class="font-display text-3xl font-bold">4.59%</p><p class="text-white/70 text-sm">Engagement</p></div></div>
+            <div class="bg-green-500/30 rounded-xl p-4 border-2 border-green-400/50"><p class="text-green-200 font-bold">🏆 Key Win: 5x increase on brand post engagement</p></div>
+          </div>
+          <div class="flex gap-3 h-full items-center">
+            <img src="images/campaigns/holoworld-1.png" alt="Holoworld Campaign" class="rounded-lg border-2 border-white/30 w-1/2 h-[200px] object-cover object-top">
+            <img src="images/campaigns/holoworld-2.png" alt="Holoworld Campaign" class="rounded-lg border-2 border-white/30 w-1/2 h-[200px] object-cover object-top">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- RESULTS-GOLDFINCH -->
+    <div id="case-goldfinch" class="case-content hidden">
+      <div class="bg-white/20 rounded-2xl border-2 border-white/40 p-4 sm:p-8">
+        <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
+          <div>
+            <div class="flex items-center gap-4 mb-6"><img src="images/brands/goldfinch.svg" alt="Goldfinch" class="w-12 h-12 bg-white rounded-xl p-2 border-2 border-white/50 object-contain"><div><h3 class="font-display text-2xl font-bold">Goldfinch</h3><p class="text-white/70">Monthly Content Retainer</p></div></div>
+            <div class="space-y-3 mb-6"><div class="flex justify-between py-2 border-b border-white/20"><span class="text-white/70">Campaign Type</span><span class="font-semibold">Raid (Standard) - Monthly</span></div><div class="flex justify-between py-2 border-b border-white/20"><span class="text-white/70">Budget</span><span class="font-semibold">$3,000/month</span></div><div class="flex justify-between py-2 border-b border-white/20"><span class="text-white/70">Goal</span><span class="font-semibold">Consistent awareness & narrative</span></div></div>
+            <div class="grid grid-cols-2 gap-3 mb-6"><div class="bg-white/15 rounded-xl p-4 text-center border border-white/30"><p class="font-display text-3xl font-bold">50</p><p class="text-white/70 text-sm">Posts/Month</p></div><div class="bg-white/15 rounded-xl p-4 text-center border border-white/30"><p class="font-display text-3xl font-bold">50</p><p class="text-white/70 text-sm">Creators</p></div><div class="bg-white/15 rounded-xl p-4 text-center border border-white/30"><p class="font-display text-3xl font-bold">~75K</p><p class="text-white/70 text-sm">Monthly Impressions</p></div><div class="bg-white/15 rounded-xl p-4 text-center border border-white/30"><p class="font-display text-3xl font-bold">4.72%</p><p class="text-white/70 text-sm">Engagement</p></div></div>
+            <div class="bg-green-500/30 rounded-xl p-4 border-2 border-green-400/50"><p class="text-green-200 font-bold">🏆 Key Win: Consistent timeline presence, automated narrative</p></div>
+          </div>
+          <div class="flex gap-3 h-full items-center">
+            <img src="images/campaigns/goldfinch-1.png" alt="Goldfinch Campaign" class="rounded-lg border-2 border-white/30 w-1/2 h-[200px] object-cover object-top">
+            <img src="images/campaigns/goldfinch-2.png" alt="Goldfinch Campaign" class="rounded-lg border-2 border-white/30 w-1/2 h-[200px] object-cover object-top">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======================= END: RESULTS ======================= -->
+
+<!-- ======================= SECTION: PRICING ======================= -->
+<section id="pricing" class="py-20 px-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Pricing & Estimator</h2>
+      <p class="text-lg text-dark/60">Transparent pricing with real-time estimates</p>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-8">
+      <!-- PRICING-RAIDS -->
+      <div class="bg-white rounded-2xl border-4 border-dark shadow-brutal overflow-hidden">
+        <div class="bg-dark text-white p-6 text-center"><span class="text-4xl mb-2 block">🚀</span><h3 class="font-display text-2xl font-bold">Raids</h3><p class="text-white/70 mt-1">Coordinated push campaigns</p></div>
+        <div class="p-6">
+          <div class="mb-6"><div class="flex items-center justify-between mb-1"><span class="text-dark/60">Starting from</span><span class="font-display text-3xl font-bold text-brand">$5,000</span></div><p class="text-dark/50 text-sm">24-48 hour coordinated campaigns</p></div>
+          <ul class="space-y-2 mb-6 text-sm"><li class="flex items-center gap-2"><span class="text-green-500">✓</span> 50-250 posts per campaign</li><li class="flex items-center gap-2"><span class="text-green-500">✓</span> Creator briefing & coordination</li><li class="flex items-center gap-2"><span class="text-green-500">✓</span> Post-campaign performance report</li><li class="flex items-center gap-2"><span class="text-green-500">✓</span> $15-$35 CPM range</li></ul>
+          <div class="bg-cream rounded-xl p-5 border-2 border-dark/10">
+            <p class="font-display font-bold mb-3">Quick Estimator</p>
+            <div class="mb-5"><label class="block text-dark/60 text-sm mb-1">Budget: <span id="raid-budget-display" class="font-bold text-dark">$10,000</span></label><input type="range" id="raid-slider" min="5000" max="25000" step="1000" value="10000" class="w-full" oninput="updateRaidEstimate()"><div class="flex justify-between text-xs text-dark/40 mt-1"><span>$5K</span><span>$25K</span></div></div>
+            <div class="grid grid-cols-2 gap-2"><div class="bg-white rounded-lg p-3 text-center border border-dark/10"><p class="text-xs text-dark/50">Est. Posts</p><p class="font-display text-xl font-bold" id="raid-posts">120-160</p></div><div class="bg-white rounded-lg p-3 text-center border border-dark/10"><p class="text-xs text-dark/50">Est. Impressions</p><p class="font-display text-xl font-bold text-brand" id="raid-impressions">200K-300K</p></div><div class="bg-white rounded-lg p-3 text-center border border-dark/10"><p class="text-xs text-dark/50">Est. Creators</p><p class="font-display text-xl font-bold" id="raid-creators">120-160</p></div><div class="bg-white rounded-lg p-3 text-center border border-dark/10"><p class="text-xs text-dark/50">Est. CPM</p><p class="font-display text-xl font-bold text-green-600" id="raid-cpm">$25-$33</p></div></div>
+          </div>
+          <a href="https://t.me/davidonchain" target="_blank" class="block w-full bg-dark text-white py-3 rounded-xl font-bold text-center border-3 border-dark hover-lift mt-6">Launch a Raid Campaign →</a>
+        </div>
+      </div>
+      <!-- PRICING-ARENA -->
+      <div class="bg-gradient-to-br from-brand to-blue-600 text-white rounded-2xl border-4 border-dark shadow-brutal overflow-hidden relative">
+        <div class="absolute top-4 right-4 bg-yellow-400 text-dark px-3 py-1 rounded-full text-sm font-bold">RECOMMENDED</div>
+        <div class="bg-black/20 p-6 text-center"><span class="text-4xl mb-2 block">🏆</span><h3 class="font-display text-2xl font-bold">Arena</h3><p class="text-white/80 mt-1">Competitive leaderboard campaigns</p></div>
+        <div class="p-6">
+          <div class="mb-6"><div class="flex items-center justify-between mb-1"><span class="text-white/70">Starting from</span><span class="font-display text-3xl font-bold">$25,000</span></div><p class="text-white/60 text-sm">4-12 week competitive campaigns</p></div>
+          <ul class="space-y-2 mb-6 text-sm text-white/90"><li class="flex items-center gap-2"><span class="text-green-400">✓</span> 500-1000+ posts per campaign</li><li class="flex items-center gap-2"><span class="text-green-400">✓</span> Performance-based creator payouts</li><li class="flex items-center gap-2"><span class="text-green-400">✓</span> Real-time leaderboard dashboard</li><li class="flex items-center gap-2"><span class="text-green-400">✓</span> $10-$25 CPM range</li></ul>
+          <div class="bg-white/15 rounded-xl p-5 border-2 border-white/30">
+            <p class="font-display font-bold mb-3">Quick Estimator</p>
+            <div class="mb-5"><label class="block text-white/70 text-sm mb-1">Budget: <span id="arena-budget-display" class="font-bold text-white">$50,000</span></label><input type="range" id="arena-slider" min="25000" max="100000" step="5000" value="50000" class="w-full" oninput="updateArenaEstimate()"><div class="flex justify-between text-xs text-white/40 mt-1"><span>$25K</span><span>$100K</span></div></div>
+            <div class="grid grid-cols-2 gap-2"><div class="bg-white/15 rounded-lg p-3 text-center border border-white/30"><p class="text-xs text-white/60">Est. Posts</p><p class="font-display text-xl font-bold" id="arena-posts">1200-1800+</p></div><div class="bg-white/15 rounded-lg p-3 text-center border border-white/30"><p class="text-xs text-white/60">Est. Impressions</p><p class="font-display text-xl font-bold" id="arena-impressions">2.2M-3.2M+</p></div><div class="bg-white/15 rounded-lg p-3 text-center border border-white/30"><p class="text-xs text-white/60">Duration</p><p class="font-display text-xl font-bold" id="arena-duration">6-8 weeks</p></div><div class="bg-white/15 rounded-lg p-3 text-center border border-white/30"><p class="text-xs text-white/60">Est. CPM</p><p class="font-display text-xl font-bold text-green-400" id="arena-cpm">$16-$22</p></div></div>
+          </div>
+          <a href="https://t.me/davidonchain" target="_blank" class="block w-full bg-white text-brand py-3 rounded-xl font-bold text-center border-3 border-dark hover-lift mt-6">Launch Arena Campaign →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======================= END: PRICING ======================= -->
+
+<!-- ======================= SECTION: FAQ ======================= -->
+<section class="py-20 px-4 bg-white border-y-3 border-dark">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-10"><h2 class="font-display text-3xl sm:text-4xl font-bold">Frequently Asked Questions</h2></div>
+    <div class="space-y-3">
+      <div class="bg-cream rounded-xl border-3 border-dark overflow-hidden"><button onclick="toggleFaq(this)" class="w-full p-5 text-left font-semibold flex justify-between items-center">How do you vet your creators?<span class="text-xl">+</span></button><div class="faq-content hidden px-5 pb-5 text-dark/70">Every creator is manually reviewed. We check follower authenticity, engagement patterns, content quality, and crypto knowledge.</div></div>
+      <div class="bg-cream rounded-xl border-3 border-dark overflow-hidden"><button onclick="toggleFaq(this)" class="w-full p-5 text-left font-semibold flex justify-between items-center">What's the difference between Raids and Arena?<span class="text-xl">+</span></button><div class="faq-content hidden px-5 pb-5 text-dark/70">Raids are short 24-48h coordinated bursts. Arena campaigns run 4-12 weeks with competitive leaderboards and performance-based payouts.</div></div>
+      <div class="bg-cream rounded-xl border-3 border-dark overflow-hidden"><button onclick="toggleFaq(this)" class="w-full p-5 text-left font-semibold flex justify-between items-center">How quickly can you launch?<span class="text-xl">+</span></button><div class="faq-content hidden px-5 pb-5 text-dark/70">Raids can launch within 24-48 hours. Arena campaigns take 3-5 days to set up. We can expedite for urgent launches.</div></div>
+      <div class="bg-cream rounded-xl border-3 border-dark overflow-hidden"><button onclick="toggleFaq(this)" class="w-full p-5 text-left font-semibold flex justify-between items-center">What metrics do you track?<span class="text-xl">+</span></button><div class="faq-content hidden px-5 pb-5 text-dark/70">Impressions, engagement, engagement rate, CPM, unique reach. Arena includes real-time leaderboard and individual creator scores.</div></div>
+    </div>
+  </div>
+</section>
+<!-- ======================= END: FAQ ======================= -->
+
+<!-- ======================= SECTION: CTA ======================= -->
+<section class="py-16 sm:py-20 px-4 bg-dark text-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">Ready to Activate the Creatorverse?</h2>
+    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+      <a href="https://calendly.com/davidonchain/30min" target="_blank" class="bg-brand text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg border-3 border-white/30 shadow-brutal hover-lift">Book a Call →</a>
+      <a href="https://t.me/davidonchain" target="_blank" class="bg-white text-dark px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg border-3 border-dark shadow-brutal hover-lift">Message on Telegram</a>
+    </div>
+  </div>
+</section>
+<!-- ======================= END: CTA ======================= -->
+
+<!-- ======================= SECTION: FOOTER ======================= -->
+<footer class="py-8 sm:py-10 px-4 bg-cream border-t-3 border-dark">
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <a href="#" class="flex items-center gap-2">
+      <img src="images/logos/scal3-creatorverse-logo.svg" alt="SCAL3 Creatorverse" class="h-12 sm:h-14 w-auto">
+    </a>
+    <p class="text-dark/50 text-xs sm:text-sm">© 2026 SCAL3 Marketing. All rights reserved.</p>
+  </div>
+</footer>
+<!-- ======================= END: FOOTER ======================= -->
+
+<!-- ======================= SCRIPTS ======================= -->
+<script>
+let caseAutoRotate;
+const cases = ['hellotrade', 'holoworld', 'goldfinch'];
+let currentCase = 0;
+
+function showCase(id) {
+  if (caseAutoRotate) clearInterval(caseAutoRotate);
+  document.querySelectorAll('.case-content').forEach(el => el.classList.add('hidden'));
+  document.querySelectorAll('.case-tab').forEach(el => { el.classList.remove('bg-white', 'text-brand', 'border-dark', 'shadow-brutal-sm'); el.classList.add('bg-white/20', 'text-white', 'border-white/40'); });
+  document.getElementById('case-' + id).classList.remove('hidden');
+  const tab = document.querySelector('[data-tab="' + id + '"]');
+  tab.classList.remove('bg-white/20', 'text-white', 'border-white/40'); 
+  tab.classList.add('bg-white', 'text-brand', 'border-dark', 'shadow-brutal-sm');
+  currentCase = cases.indexOf(id);
+  startCaseAutoRotate();
+}
+
+function startCaseAutoRotate() {
+  caseAutoRotate = setInterval(() => {
+    currentCase = (currentCase + 1) % cases.length;
+    document.querySelectorAll('.case-content').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.case-tab').forEach(el => { el.classList.remove('bg-white', 'text-brand', 'border-dark', 'shadow-brutal-sm'); el.classList.add('bg-white/20', 'text-white', 'border-white/40'); });
+    document.getElementById('case-' + cases[currentCase]).classList.remove('hidden');
+    const tab = document.querySelector('[data-tab="' + cases[currentCase] + '"]');
+    tab.classList.remove('bg-white/20', 'text-white', 'border-white/40'); 
+    tab.classList.add('bg-white', 'text-brand', 'border-dark', 'shadow-brutal-sm');
+  }, 5000);
+}
+startCaseAutoRotate();
+
+function toggleFaq(btn) {
+  const content = btn.nextElementSibling;
+  const icon = btn.querySelector('span');
+  content.classList.toggle('hidden');
+  icon.textContent = content.classList.contains('hidden') ? '+' : '−';
+}
+
+function showHowItWorks(type) {
+  document.querySelectorAll('.hiw-content').forEach(el => el.classList.add('hidden'));
+  document.querySelectorAll('.hiw-btn').forEach(btn => { btn.classList.remove('bg-brand', 'text-white', 'shadow-brutal'); btn.classList.add('bg-white', 'text-dark'); });
+  document.getElementById('hiw-' + type).classList.remove('hidden');
+  const btn = document.getElementById('hiw-' + type + '-btn');
+  btn.classList.remove('bg-white', 'text-dark'); btn.classList.add('bg-brand', 'text-white', 'shadow-brutal');
+}
+
+// RAID Calculator - CPM gets LOWER as budget increases, impressions boosted
+function updateRaidEstimate() {
+  const budget = parseInt(document.getElementById('raid-slider').value);
+  document.getElementById('raid-budget-display').textContent = '$' + budget.toLocaleString();
+  const ratio = (budget - 5000) / 20000;
+  const postsLow = Math.round(60 + ratio * 290);
+  const postsHigh = Math.round(80 + ratio * 320);
+  // Boosted impressions for lower CPMs
+  const impLow = Math.round(100 + ratio * 550);
+  const impHigh = Math.round(160 + ratio * 740);
+  // CPM gets LOWER at higher budgets
+  const cpmHigh = Math.round(35 - ratio * 15);
+  const cpmLow = Math.round(28 - ratio * 13);
+  document.getElementById('raid-posts').textContent = postsLow + '-' + postsHigh;
+  document.getElementById('raid-impressions').textContent = impLow + 'K-' + impHigh + 'K';
+  document.getElementById('raid-creators').textContent = postsLow + '-' + postsHigh;
+  document.getElementById('raid-cpm').textContent = '$' + cpmLow + '-$' + cpmHigh;
+}
+
+// ARENA Calculator - CPM gets LOWER as budget increases, starting $18-$26
+function updateArenaEstimate() {
+  const budget = parseInt(document.getElementById('arena-slider').value);
+  document.getElementById('arena-budget-display').textContent = '$' + budget.toLocaleString();
+  const ratio = (budget - 25000) / 75000;
+  const postsLow = Math.round(500 + ratio * 2000);
+  const postsHigh = Math.round(800 + ratio * 3200);
+  // Boosted impressions for lower CPMs
+  const impLow = (1.1 + ratio * 3.4).toFixed(1);
+  const impHigh = (1.6 + ratio * 4.9).toFixed(1);
+  let duration;
+  if (budget <= 35000) duration = '4-6 weeks';
+  else if (budget <= 50000) duration = '6-8 weeks';
+  else if (budget <= 75000) duration = '8-10 weeks';
+  else duration = '10-12 weeks';
+  // CPM starts at $18-$26 and scales down to $10-$15
+  const cpmHigh = Math.round(26 - ratio * 11);
+  const cpmLow = Math.round(18 - ratio * 8);
+  document.getElementById('arena-posts').textContent = postsLow + '-' + postsHigh + '+';
+  // Use K for values under 1M
+  if (parseFloat(impLow) < 1) {
+    document.getElementById('arena-impressions').textContent = Math.round(parseFloat(impLow) * 1000) + 'K-' + impHigh + 'M+';
+  } else {
+    document.getElementById('arena-impressions').textContent = impLow + 'M-' + impHigh + 'M+';
+  }
+  document.getElementById('arena-duration').textContent = duration;
+  document.getElementById('arena-cpm').textContent = '$' + cpmLow + '-$' + cpmHigh;
+}
+
+updateRaidEstimate();
+updateArenaEstimate();
+</script>
+<!-- ======================= END: SCRIPTS ======================= -->
+</body>
+</html>
